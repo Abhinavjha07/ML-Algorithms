@@ -34,7 +34,7 @@ def update(X,assign,k):
     return n_c
 
 def k_means(X,Y,k):
-    x= random.sample(range(0,X.shape[0]),3)
+    x= random.sample(range(0,X.shape[0]),k)
     
     c = X[x,:]
     
@@ -107,7 +107,7 @@ data = shuffle(data)
 X = data[:,:4]
 Y = data[:,4:]
 #print(X.shape,Y.shape)
-n_clusters = 3
+n_clusters = 5
 
 centers = k_means(X,Y,n_clusters)
 #print(centers.shape)
